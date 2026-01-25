@@ -79,6 +79,15 @@ CACHE_CONFIG = {
 DATA_CACHE_CONFIG = CACHE_CONFIG
 THUMBNAIL_CACHE_CONFIG = CACHE_CONFIG
 
+BABEL_DEFAULT_LOCALE = 'zh'  # 默认语言为中文
+BABEL_DEFAULT_FOLDER = 'superset/translations'  # 多语言路径
+
+# 可选语言
+LANGUAGES = {
+    'en': {'flag': 'us', 'name': 'English'},
+    'zh': {'flag': 'cn', 'name': 'Chinese'},
+}
+
 
 class CeleryConfig:
     broker_url = f"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_CELERY_DB}"
